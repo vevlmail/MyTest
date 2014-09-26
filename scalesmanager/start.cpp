@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 	std::cout << "Hello Я" << std::endl;
 	std::cin>>a;
 	std::cout << std::endl;
+	std::cout << std::endl;
 	return 0;
 }
 
