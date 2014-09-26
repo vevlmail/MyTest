@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	std::cin>>a;
 	std::cout << std::endl;
 	std::cout << std::endl;
+	std::cout << std::endl;
 	return 0;
 }
 
