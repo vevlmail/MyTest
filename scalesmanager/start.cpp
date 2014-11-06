@@ -6,27 +6,40 @@
  */
 #include <iostream>
 #include <vector>
+#include <fstream>
+
+using namespace std;
 
 int main(int argc, char **argv) {
-	std::vector<int> s(4);
-	for (int &i : s) {
-		i = 1;
-	}
-	for (int i : s) {
-		std::cout << i << std::endl;
-	}
-	int a[5] = {1,2,3,4,5};
-	for(int i=0; i<5; ++i)
-	{
-		std::cout << a[i] <<std::endl;
-	}
-	std::cout<<"###########################"<< std::endl;
-	int j=5;
-	while(++j<9)
-		std::cout << j++ << std::endl;
-	int y = (1,8);
-	y=1,8;
-	std::cout<< y << std::endl;
+
+	char automobile[50];
+	int year;
+	double a_price, d_price;;
+	ofstream outFile;
+	outFile.open("carinfo.txt");
+	cout<<"Enter the make and model of automobile: ";
+	cin.getline(automobile,50);
+	cout<<"Enter the model year: ";
+	cin>>year;
+	cout<<"Enter the price: ";
+	cin>>a_price;
+	d_price=9.13*a_price;
+
+
+	cout<<fixed;
+	cout.precision(2);
+	cout.setf(ios_base::showpoint);
+	cout<<"the make and model of automobile: "
+	<< automobile << endl;
+	cout<<"the model year: "
+	<<year<<endl;
+	cout<<"the price: "
+	<< d_price << endl;
+	outFile<< fixed;
+	outFile.precision(2);
+	outFile.setf(ios_base::showpoint);
+	outFile<<d_price;
+	outFile.close();
 	std::cin.get();
 	return 0;
 }
